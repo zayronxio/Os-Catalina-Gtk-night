@@ -10876,7 +10876,7 @@ margin-bottom: -1px;
 
 .thunar toolbar .linked:not(.vertical).path-bar > button:hover {
 
-  color:ffffff;
+  color:#ffffff;
   text-shadow: 0px 1px alpha(#000000, 0.40),0 -1px alpha(#ffffff, 0.04),-1px  0px alpha(#ffffff, 0.04);
   background-color: transparent;
   border-color: rgba(0,0,0,0.6);
