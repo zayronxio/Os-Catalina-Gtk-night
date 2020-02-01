@@ -37,7 +37,7 @@
 
 headerbar .linked:not(.vertical) > button, headerbar .linked.raised:not(.vertical):not(.path-bar) > button.image-button, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button,
 headerbar .linked:not(.vertical).path-bar > button, .nemo-window .primary-toolbar .linked.raised > button, .nemo-window .primary-toolbar .linked.path-bar > button, .nemo-window .primary-toolbar .linked.path-bar > button.image-button {
-  outline-color: alpha(currentColor,0.3);
+  outline-color: #202020;
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
@@ -7325,16 +7325,54 @@ XfdesktopIconView.view {
 
 XfdesktopIconView.view:active, XfdesktopIconView.view:checked {
   background-color: #315bef;
-  color: #ffffff;
+  color: #17171d;
   text-shadow: none;
 }
 
+#whiskermenu-window entry {
+  background-color: #4a4b50;
+  color: #ebedee;
+}
+#whiskermenu-button:checked {
+    background-image: linear-gradient(to bottom, shade(#B8B8B8, 1.02), shade(#B8B8B8, 0.95));
+    border-top-color: shade(#7C7E80, 1.6);
+    border-right-color: shade(#7C7E80, 1.45);
+    border-left-color: shade(#7C7E80, 1.25);
+    border-bottom-color: shade(#7C7E80, 0.9);
+    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
+}
+window#whiskermenu-window * {
+border: 0;
+outline: none;
+}
 window#whiskermenu-window {
-  background-color: #333333;
+background-color: #343436;
+border-radius: 0 0 12px 12px;
+box-shadow: 0 2px 4px rgba(0, 122, 255, 0.3)
 }
 
+
+#whiskermenu-window treeview {
+background-color: #343436;
+border-color: none;
+border: none;
+color: #efeff0;
+
+}
+#whiskermenu-window border {
+background-color: #f1f1f1;
+border-color: #f5f5f5;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+#whiskermenu-window treeview:hover {
+border-color: #fcfbfc;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
 window#whiskermenu-window > frame > border {
-  border-radius: 0;
+background: none;
+border-radius: 0 0 12px 12px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+border-color: transparent;
 }
 
 window#whiskermenu-window scrolledwindow > viewport button.radio {
@@ -7343,11 +7381,11 @@ window#whiskermenu-window scrolledwindow > viewport button.radio {
 }
 
 window#whiskermenu-window scrolledwindow > viewport button.radio:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(2, 171, 249, 0.5);
 }
 
 window#whiskermenu-window scrolledwindow > viewport button.radio:checked, window#whiskermenu-window scrolledwindow > viewport button.radio:active {
-  background-color: #315bef;
+  background-color: #0266e2;
   color: #ffffff;
 }
 
@@ -7356,8 +7394,15 @@ window#whiskermenu-window scrolledwindow > viewport button.radio:checked:hover, 
 }
 
 window#whiskermenu-window scrolledwindow treeview.view:selected:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #dedede;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #242424;
+}
+#whiskermenu-window button:focus,
+#whiskermenu-window button:hover,
+#whiskermenu-window treeview:selected,
+{
+  background-color: #D64937;
+  color: #fff;
 }
 
 dialog.background > box.vertical > .dialog-vbox > .dialog-action-box > .dialog-action-area {
@@ -7378,12 +7423,13 @@ window.background.csd.thunar > grid.horizontal > paned.horizontal > separator {
 }
 
 window.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane {
-  border-top: none;
-  background-color: rgba(59, 59, 59, 0.95);
+  border-top: 1px;
+  border-color: #212121;
+  background-color: #323232;
 }
 
 window.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view {
-  background-color: rgba(59, 59, 59, 0.95);
+  background-color: transparent;
 }
 
 window.thunar > grid.horizontal > paned.horizontal > scrolledwindow.frame.sidebar.shortcuts-pane treeview.view:hover {
@@ -7411,6 +7457,26 @@ window.thunar notebook stack > scrolledwindow.frame.standard-view {
 window.thunar notebook header.top tab.reorderable-page > box > label {
   min-height: 0;
 }
+
+
+/********
+  *xfsm-logout*
+   **************/
+
+.xfsm-logout-dialog {
+
+  	background-color: rgba(21, 21, 21, 0.88);
+  	border-radius: 12px;
+        border-color: transparent;
+}
+
+.xfsm-logout-dialog button {
+border: 2px rgba(21, 21, 21, 0);
+  	background-color: transparent;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0), 0 6px 20px 0 rgba(0,0,0,0);
+
+}
+
 
 /*********
   * Geary *
@@ -10801,16 +10867,16 @@ window.budgie-switcher-window flowboxchild {
 margin-bottom: -1px;
   background-color: transparent;
   /*background-image: linear-gradient(to top, #b3b3b3 1px, #d8d7d8 1px, #deddde); */
-  background-image: linear-gradient(to top, #3a3a3c, #3a3a3c);}
+   background-image: linear-gradient(to top, #3a3a3c, #3a3a3c); }
 
 .thunar toolbar{
-  margin-top: -2px;
+  margin-top: 0px;
  /* margin-top: 0px;*/
-  padding-bottom: 4px;
-  padding-left: 6px;
+  padding-bottom: 6px;
+  padding-left: 8px;
   padding-right: 8px;
   background-color: transparent;
-  background-image: linear-gradient(to top, #3a3a3c, #3a3a3c); /*#343437, #3a3b3e);*/ }
+  background-image: linear-gradient(to top, #212121 1px, #323232 1px, #424140); /*#343437, #3a3b3e);*/ }
 
 .thunar toolbar button{
 
@@ -10916,7 +10982,7 @@ background-image: linear-gradient(to bottom,#5c5d5d,#5c5d5d 0.8px,#7a7b7c 0.8px,
 
 .thunar paned > separator {
 
-  background-image: image(#000000); }
+  background-image: image(#141414); }
 @define-color theme_fg_color #dedede;
 @define-color theme_text_color #dadada;
 @define-color theme_bg_color #333333;
